@@ -1,0 +1,89 @@
+Added city albany
+Added city newyork
+Added city boston
+Linked cities albany and newyork
+Linked cities albany and boston
+Linked cities newyork and boston
+Placed pursuer ta in city newyork
+Placed evader student in city albany
+
+Neighbors for city albany:  boston newyork
+Neighbors for city boston:  albany newyork
+Neighbors for city newyork:  albany boston
+Evader student is in albany
+Pursuer ta is in newyork
+
+TICK
+Where should student go next?
+  (0) stay in albany
+  (1) boston
+  (2) newyork
+0
+student stays in albany
+ta moves from newyork to boston
+TICK
+Where should student go next?
+  (0) stay in albany
+  (1) boston
+  (2) newyork
+1
+student moves from albany to boston
+ta moves from boston to newyork
+TICK
+Where should student go next?
+  (0) stay in boston
+  (1) albany
+  (2) newyork
+1
+student moves from boston to albany
+ta moves from newyork to boston
+TICK
+Where should student go next?
+  (0) stay in albany
+  (1) boston
+  (2) newyork
+2
+student moves from albany to newyork
+ta stays in boston
+TICK
+Where should student go next?
+  (0) stay in newyork
+  (1) albany
+  (2) boston
+0
+student stays in newyork
+ta moves from boston to albany
+TICK
+Where should student go next?
+  (0) stay in newyork
+  (1) albany
+  (2) boston
+1
+student moves from newyork to albany
+ta moves from albany to boston
+TICK
+Where should student go next?
+  (0) stay in albany
+  (1) boston
+  (2) newyork
+2
+student moves from albany to newyork
+ta moves from boston to albany
+TICK
+Where should student go next?
+  (0) stay in newyork
+  (1) albany
+  (2) boston
+2
+student moves from newyork to boston
+ta stays in albany
+TICK
+Where should student go next?
+  (0) stay in boston
+  (1) albany
+  (2) newyork
+2
+student moves from boston to newyork
+ta moves from albany to newyork
+ta has caught student in newyork
+Evader loses

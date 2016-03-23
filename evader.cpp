@@ -1,0 +1,128 @@
+#include <cassert>
+#include <iostream>
+#include <vector>
+#include "MersenneTwister.h"
+#include "person.h"
+#include "city.h"
+#include "graph.h"
+
+using namespace std;
+//checks if there is any tas on the spot
+bool taCheck(City* s, const Graph& city_graph) {
+    std::vector<Person*> purs = city_graph.getPursuers();
+    vector<Person*>::iterator a = purs.begin();
+    while(a != purs.end()) {
+        if ((*a)->getLocation()->getName() == s->getName()) {
+            return false;
+        }
+        else {
+            a++;
+        }
+    }
+    return true;
+}
+
+
+//create a number by checking the amount of ta's connected to this city and to the subsequent cities
+int taDangerLevel(City* s, const Graph& city_graph) {
+    int total = 0;
+
+    std::vector<Person*> purs = city_graph.getPursuers();
+    vector<Person*>::iterator a = purs.begin();
+
+    while(a != purs.end()) {
+
+        if ((*a)->getLocation() == s) {
+            total = total + 10;
+        }
+
+        vector<City*> neib = s->getNeighbors();
+        vector<City*>::iterator b = neib.begin();
+
+        while(b != neib.end()) {
+            if ((*a)->getLocation() == *b) {
+                total = total + 5;
+            }
+            vector<City*> neib2 = (*b)->getNeighbors();
+            vector<City*>::iterator c = neib2.begin();
+
+            while(c != neib2.end()) {
+                if ((*a)->getLocation() == *c) {
+                    total++;
+                }
+                c++;
+
+            }
+            b++;
+        }
+        a++;
+    }
+
+    return total;
+
+
+}
+
+
+//since we are not allowed to modify graph.cpp I wrote this to find  all the cities
+vector<City*> getCities(City* s) {
+    vector<City*> a;
+
+
+    vector<City*> neib = (s)->getNeighbors();
+    vector<City*>::iterator c = neib.begin();
+
+    while(c != neib.end()) {
+		
+        bool passed = true;
+        for (vector<City*>::iterator temp = a.begin(); temp != a.end() && passed == true; temp++) {
+			
+            if (*temp == *c ) {
+                passed = false;
+            }
+        }
+        if (passed == true)
+            a.push_back(*c);
+
+
+        vector<City*> neib2 = (*c)->getNeighbors();
+        vector<City*>::iterator d = neib2.begin();
+
+        while(d != neib2.end()) {
+
+            bool passed2 = true;
+            for (vector<City*>::iterator temp2 = a.begin(); temp2 != a.end() && passed2 == true; temp2++) {
+                if (*temp2 == *d ) {
+                    passed2 = false;
+                }
+            }
+            if (passed2 == true)
+                a.push_back(*d);
+
+
+d++;
+        }
+
+c++;
+    }
+    return a;
+}
+
+
+City* MY_EVADER_STRATEGY(const Person& p, const Graph& city_graph) {
+
+    vector<City*> b = getCities(p.getLocation());
+
+    int min;
+    City* a = *(b.begin());
+
+    for (vector<City*>::const_iterator itr = b.begin(); itr != b.end(); itr++) {
+        if(taDangerLevel(*itr,city_graph) < min) {
+            min = taDangerLevel(*itr, city_graph);
+            a = *itr;
+        }
+    }
+    return a;
+}
+
+

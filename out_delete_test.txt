@@ -1,0 +1,93 @@
+Added city newyork
+Added city boston
+Added city philadelphia
+Linked cities philadelphia and newyork
+Added city providence
+Placed evader student in city boston
+Error trying to place evader student2 in city albany
+Added city chicago
+Linked cities providence and boston
+Added city albany
+Linked cities newyork and albany
+Added city baltimore
+Linked cities newyork and providence
+Placed pursuer ta1 in city baltimore
+Linked cities albany and boston
+Linked cities newyork and boston
+Linked cities philadelphia and baltimore
+Placed pursuer ta2 in city philadelphia
+Error trying to place pursuer ta2 in city baltimore
+
+Neighbors for city albany:  boston newyork
+Neighbors for city baltimore:  philadelphia
+Neighbors for city boston:  albany newyork providence
+Neighbors for city chicago: 
+Neighbors for city newyork:  albany boston philadelphia providence
+Neighbors for city philadelphia:  baltimore newyork
+Neighbors for city providence:  boston newyork
+Evader student is in boston
+Pursuer ta1 is in baltimore
+Pursuer ta2 is in philadelphia
+
+TICK
+Where should student go next?
+  (0) stay in boston
+  (1) albany
+  (2) newyork
+  (3) providence
+1
+student moves from boston to albany
+ta1 moves from baltimore to philadelphia
+ta2 moves from philadelphia to baltimore
+Removed city newyork
+TICK
+Where should student go next?
+  (0) stay in albany
+  (1) boston
+0
+student stays in albany
+ta1 stays in philadelphia
+ta2 moves from baltimore to philadelphia
+TICK
+Where should student go next?
+  (0) stay in albany
+  (1) boston
+1
+student moves from albany to boston
+ta1 moves from philadelphia to baltimore
+ta2 stays in philadelphia
+Placed pursuer ta3 in city chicago
+TICK
+Where should student go next?
+  (0) stay in boston
+  (1) albany
+  (2) providence
+2
+student moves from boston to providence
+ta1 stays in baltimore
+ta2 moves from philadelphia to baltimore
+ta3 stays in chicago
+Pursuer ta3 removed from the game
+Removed city chicago
+TICK
+Where should student go next?
+  (0) stay in providence
+  (1) boston
+0
+student stays in providence
+ta1 moves from baltimore to philadelphia
+ta2 stays in baltimore
+Removed city boston
+Removed city albany
+Evader student removed from the game
+Removed city providence
+TICK
+ta1 stays in philadelphia
+ta2 stays in baltimore
+TICK
+ta1 stays in philadelphia
+ta2 stays in baltimore
+TICK
+ta1 stays in philadelphia
+ta2 stays in baltimore
+No evader in graph to capture

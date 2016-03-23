@@ -1,0 +1,45 @@
+add-city newyork
+add-city boston
+add-city newyork
+add-link boston newyork
+add-link boston newark
+add-link newyork boston
+print
+add-city newark
+add-link newark newyork
+print
+add-city providence
+add-link providence boston
+add-city albany
+add-city philadelphia
+add-link philadelphia newark
+add-city baltimore
+add-link philadelphia baltimore
+print
+add-link newyork albany
+print
+remove-city newyork
+remove-link albany newyork
+add-city newyork
+add-city washington
+add-link newyork providence
+add-link newyork newark
+add-link newyork baltimore
+add-link baltimore washington
+add-city pittsburgh
+add-city cleveland
+add-city buffalo
+add-city bloomington
+add-city chicago
+add-link pittsburgh cleveland
+add-link cleveland buffalo
+add-link cleveland bloomington
+add-link bloomington chicago
+add-city harrisburg
+add-link philadelphia harrisburg
+add-link philadelphia pittsburgh
+add-link harrisburg pittsburgh
+add-link boston newyork
+remove-link philadelphia pittsburgh
+remove-link philadelphia pittsburgh
+print

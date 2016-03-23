@@ -1,0 +1,64 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <cassert>
+#include "city.h"
+
+using namespace std;
+
+//Check to see if city passed in is a neighbor
+bool City::isNeighbor(City* city) const {
+    for (vector<City*>::const_iterator itr = neighbors.begin(); itr != neighbors.end(); itr++) {
+        if (city == *itr)
+            return true;
+    }
+    return false;
+}
+
+// MODIFIERS
+//adds the neighbor to the list of majors
+bool City::addNeighbor(City* city) {
+	//automatically adds if nothing in list
+    if (neighbors.size() == 0) {
+        neighbors.push_back(city);
+        return true;
+    }
+	
+    for (vector<City*>::iterator itr = neighbors.begin(); itr != neighbors.end(); itr++) {
+		//check if its already in the vector
+        if(city->getName() == (*itr)->getName()) {
+            return false;
+        }
+		//adds it in alphabetically
+        if(city->getName() < (*itr)->getName()) {
+            neighbors.insert(itr,city);
+            return true;
+        }
+    }
+	//if not added or found yet. Add it to the back
+    neighbors.push_back(city);
+    return true;
+}
+
+
+//Removal of Neighbor from the vector
+bool City::removeNeighbor(City* city) {
+    for (vector<City*>::iterator itr = neighbors.begin(); itr != neighbors.end(); itr++) {
+        if(*itr == city) {
+            neighbors.erase(itr);
+            return true;
+        }
+    }
+    return false;
+}
+
+// Tell the neighboring cities to remove this City* from its vector of neighbors.
+void City::removeCityFromItsNeighbors() {
+    for (vector<City*>::iterator itr = neighbors.begin(); itr != neighbors.end(); itr++) {
+        (*itr)->removeNeighbor(this);
+    }
+}
+
+
+

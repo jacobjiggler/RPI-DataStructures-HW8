@@ -1,0 +1,17 @@
+add-city a
+add-city b
+add-city c
+add-city d
+add-link a b
+add-link b c
+add-link c d
+add-link d a
+place-evader student a
+place-pursuer ta c
+print
+tick 1
+tick 1
+tick 1
+place-pursuer b chicago
+tick 1
+tick 3

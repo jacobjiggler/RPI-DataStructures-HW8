@@ -1,0 +1,10 @@
+add-city albany
+add-city newyork
+add-city boston
+add-link albany newyork
+add-link albany boston
+add-link newyork boston
+place-pursuer ta newyork
+place-evader student albany
+print
+tick 10

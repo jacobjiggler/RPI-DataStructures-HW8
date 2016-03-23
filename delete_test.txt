@@ -1,0 +1,33 @@
+add-city newyork
+add-city boston
+add-city philadelphia
+add-link philadelphia newyork
+add-city providence
+place-evader student boston
+place-evader student2 albany
+add-city chicago
+add-link providence boston
+add-city albany
+add-link newyork albany
+add-city baltimore
+add-link newyork providence
+place-pursuer ta1 baltimore
+add-link albany boston
+add-link newyork boston
+add-link philadelphia baltimore
+place-pursuer ta2 philadelphia
+place-pursuer ta2 baltimore
+print
+tick 1
+remove-city newyork
+tick 1
+tick 1
+place-pursuer ta3 chicago
+tick 1
+remove-city chicago
+tick 1
+remove-city boston
+remove-city albany
+remove-city providence
+tick 3
+

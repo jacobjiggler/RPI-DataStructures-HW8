@@ -1,0 +1,84 @@
+Added city newyork
+Added city boston
+Error trying to add city newyork
+Linked cities boston and newyork
+Error trying to link cities boston and newark
+Error trying to link cities newyork and boston
+
+Neighbors for city boston:  newyork
+Neighbors for city newyork:  boston
+
+Added city newark
+Linked cities newark and newyork
+
+Neighbors for city boston:  newyork
+Neighbors for city newark:  newyork
+Neighbors for city newyork:  boston newark
+
+Added city providence
+Linked cities providence and boston
+Added city albany
+Added city philadelphia
+Linked cities philadelphia and newark
+Added city baltimore
+Linked cities philadelphia and baltimore
+
+Neighbors for city albany: 
+Neighbors for city baltimore:  philadelphia
+Neighbors for city boston:  newyork providence
+Neighbors for city newark:  newyork philadelphia
+Neighbors for city newyork:  boston newark
+Neighbors for city philadelphia:  baltimore newark
+Neighbors for city providence:  boston
+
+Linked cities newyork and albany
+
+Neighbors for city albany:  newyork
+Neighbors for city baltimore:  philadelphia
+Neighbors for city boston:  newyork providence
+Neighbors for city newark:  newyork philadelphia
+Neighbors for city newyork:  albany boston newark
+Neighbors for city philadelphia:  baltimore newark
+Neighbors for city providence:  boston
+
+Removed city newyork
+Error trying to remove link from cities albany and newyork
+Added city newyork
+Added city washington
+Linked cities newyork and providence
+Linked cities newyork and newark
+Linked cities newyork and baltimore
+Linked cities baltimore and washington
+Added city pittsburgh
+Added city cleveland
+Added city buffalo
+Added city bloomington
+Added city chicago
+Linked cities pittsburgh and cleveland
+Linked cities cleveland and buffalo
+Linked cities cleveland and bloomington
+Linked cities bloomington and chicago
+Added city harrisburg
+Linked cities philadelphia and harrisburg
+Linked cities philadelphia and pittsburgh
+Linked cities harrisburg and pittsburgh
+Linked cities boston and newyork
+Removed link from cities philadelphia and pittsburgh
+Error trying to remove link from cities philadelphia and pittsburgh
+
+Neighbors for city albany: 
+Neighbors for city baltimore:  newyork philadelphia washington
+Neighbors for city bloomington:  chicago cleveland
+Neighbors for city boston:  newyork providence
+Neighbors for city buffalo:  cleveland
+Neighbors for city chicago:  bloomington
+Neighbors for city cleveland:  bloomington buffalo pittsburgh
+Neighbors for city harrisburg:  philadelphia pittsburgh
+Neighbors for city newark:  newyork philadelphia
+Neighbors for city newyork:  baltimore boston newark providence
+Neighbors for city philadelphia:  baltimore harrisburg newark
+Neighbors for city pittsburgh:  cleveland harrisburg
+Neighbors for city providence:  boston newyork
+Neighbors for city washington:  baltimore
+
+No evader in graph to capture
